@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="index.js"></script>
+</head>
+<body>
+    <input class="nameLoadCase" type="text"/>
+    <button class="addLoadBtn" onclick="addLoad()">Add Load</button>
+    <br></br>
+    <table class="loadCaseTable">
+        <thead>
+            <tr>
+                <th>Load Case</th>
+                <th>Number</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    <br></br>
+    <table class="factorsTable">
+        <thead>
+            <tr>
+                <th>Load Comb Number</th>
+            </tr>
+        </thead>
+        <tbody class="factorsBody">
+            <tr>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <button class="addCombo" onclick="addCombo()">Add Combo</button>
+    <br></br>
+    <button onclick="showOutput()">Obtain input for Staad model</button>
+    <br></br>
+    <button onclick="copyToClipboard()">Copy Output</button>
+    <div class="output"></div>
+</body>
+</html>
