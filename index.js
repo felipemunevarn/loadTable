@@ -52,6 +52,10 @@ addInput = () => {
 showOutput = () => {
     let factorsTableBodyRef = document.querySelector(".factorsTable").getElementsByTagName('tbody')[0];
     let casesTableBodyRef = document.querySelector(".loadCaseTable").getElementsByTagName('tbody')[0];
+    let output = document.querySelector(".output");
+    while (output.firstChild) {
+        output.firstChild.remove()
+    }
     for (let k = 0; k < factorsTableBodyRef.children.length; k++) {        
     
         let existRow = factorsTableBodyRef.children[k];
@@ -66,7 +70,6 @@ showOutput = () => {
                 text = text + ` ${existRow.children[i].firstElementChild.value} ${existHeader.children[i].innerHTML}`;
             }    
         }
-        let output = document.querySelector(".output");
         let newLine = document.createElement("p");
         output.appendChild(newLine);
         newLine.innerHTML = text;
@@ -109,7 +112,7 @@ addCombo = () => {
 }
 
 function copyToClipboard() {
-    let str;
+    let str = "";
     for (let i = 0; i < document.getElementsByClassName('output')[0].children.length; i++) {
         str = str + document.getElementsByClassName('output')[0].children[i].innerText + "\n";
     }
